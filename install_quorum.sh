@@ -23,7 +23,6 @@ echo 'GOROOT=/usr/local/go' >> ~/.bashrc
 echo 'PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
 source ~/.bashrc
 
-apt-get install openjdk-8-jdk
 
 curl -sL https://deb.nodesource.com/setup_6.x | bash 
 apt-get install nodejs
