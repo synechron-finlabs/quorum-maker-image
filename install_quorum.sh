@@ -6,6 +6,7 @@ apt-get install -y libdb-dev libleveldb-dev libsodium-dev zlib1g-dev libtinfo-de
 apt-get install -y build-essential
 apt-get install -y wget
 apt-get install -y curl
+apt-get install nano
 apt-get install -y git
 apk add --update go git mercurial build-base
 apt-get install -y make
@@ -23,7 +24,6 @@ echo 'GOROOT=/usr/local/go' >> ~/.bashrc
 echo 'PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
 source ~/.bashrc
 
-apt-get install openjdk-8-jdk
 
 curl -sL https://deb.nodesource.com/setup_6.x | bash 
 apt-get install nodejs
