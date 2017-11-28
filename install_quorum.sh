@@ -8,7 +8,7 @@ apt-get install -y wget
 apt-get install -y curl
 apt-get install -y nano
 apt-get install -y git
-apk add --update go git mercurial build-base
+apt add --update go git mercurial build-base
 apt-get install -y make
 apt-get install -y telnetd
 apt-get install -y openssh-server
