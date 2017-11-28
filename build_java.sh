@@ -20,7 +20,7 @@ mvn -v
 mvn clean
 mvn install
 mv /root/quorum/NodeManager/master_node.sh /root/quorum/.
-mv /root/quorum/NodeManager/target/NodeManager.jar /root/quorum/.
+mv /root/quorum/NodeManager/target/nodeManager.jar /root/quorum/.
 cd /root/quorum
 rm -rf NodeManager
 
