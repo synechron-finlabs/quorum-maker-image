@@ -1,6 +1,4 @@
 #!/bin/bash
-apt-get -y update
-apt-get install -y wget
 apt-get install -y openjdk-8-jdk
 cp /usr/lib/jvm/java-8-openjdk-amd64/jre/java /usr/bin/.
 wget http://www-eu.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
@@ -21,6 +19,9 @@ cd /root/quorum/NodeManager
 mvn -v
 mvn clean
 mvn install
+mv /root/quorum/NodeManager/target/NodeManager.jar /root/quorum
+cd /root/quorum
+rm -rf NodeManager
 
 
 
