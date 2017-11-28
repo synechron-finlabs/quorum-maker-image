@@ -6,7 +6,7 @@ apt-get install -y libdb-dev libleveldb-dev libsodium-dev zlib1g-dev libtinfo-de
 apt-get install -y build-essential
 apt-get install -y wget
 apt-get install -y curl
-apt-get install nano
+apt-get install -y nano
 apt-get install -y git
 apk add --update go git mercurial build-base
 apt-get install -y make
@@ -22,8 +22,8 @@ echo 'PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
 source ~/.bashrc
 
 curl -sL https://deb.nodesource.com/setup_6.x | bash 
-apt-get install nodejs
-apt-get install build-essential
+apt-get install -y nodejs
+apt-get install -y build-essential
 
 git clone https://github.com/jpmorganchase/quorum.git
 cd quorum
