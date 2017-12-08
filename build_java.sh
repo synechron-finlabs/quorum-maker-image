@@ -15,13 +15,13 @@ chmod a+x ~/.bashrc
 PS1='$ '
 source ~/.bashrc
 cp /usr/local/apache-maven/apache-maven-3.3.9/bin/mvn /usr/bin/.
-cd /root/quorum/NodeManager
+cd /home/quorum-maker/NodeManager
 mvn -v
 mvn clean
 mvn install
-mv /root/quorum/NodeManager/master_node.sh /root/quorum/.
-mv /root/quorum/NodeManager/target/nodeManager.jar /root/quorum/.
-cd /root/quorum
+mv /home/quorum-maker/NodeManager/master_node.sh /home/quorum-maker/.
+mv /home/quorum-maker/NodeManager/target/nodeManager.jar /home/quorum-maker/.
+cd /home/quorum-maker
 rm -rf NodeManager
 
 
