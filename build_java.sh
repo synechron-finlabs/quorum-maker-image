@@ -20,6 +20,7 @@ mvn -v
 mvn clean
 mvn install
 mv /home/quorum-maker/NodeManager/master_node.sh /home/quorum-maker/.
+mv /home/quorum-maker/NodeManager/get_genesis.sh /home/quorum-maker/.
 mv /home/quorum-maker/NodeManager/target/nodeManager.jar /home/quorum-maker/.
 cd /home/quorum-maker
 rm -rf NodeManager
