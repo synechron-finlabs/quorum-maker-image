@@ -6,6 +6,7 @@ apt-get install -y libdb-dev libleveldb-dev libsodium-dev zlib1g-dev libtinfo-de
 apt-get install -y build-essential
 apt-get install -y wget
 apt-get install -y curl
+apt-get install -y jq
 apt-get install -y nano
 apt-get install -y git
 apt add --update go git mercurial build-base
