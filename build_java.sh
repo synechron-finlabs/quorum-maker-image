@@ -1,6 +1,6 @@
 #!/bin/bash
 apt-get install -y openjdk-8-jdk
-cp /usr/lib/jvm/java-8-openjdk-amd64/jre/java /usr/bin/.
+cp /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java /usr/bin/.
 wget http://www-eu.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
 mkdir -p /usr/local/apache-maven
 mv apache-maven-3.3.9-bin.tar.gz /usr/local/apache-maven/.
@@ -25,10 +25,3 @@ mv /root/quorum-maker/NodeManager/get_genesis.sh /root/quorum-maker/.
 mv /root/quorum-maker/NodeManager/target/nodeManager.jar /root/quorum-maker/.
 cd /root/quorum-maker
 rm -rf NodeManager
-
-
-
-
-
-
-
