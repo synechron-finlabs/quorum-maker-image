@@ -8,6 +8,7 @@ ADD NodeManager /root/quorum-maker/NodeManager
 ADD build_java.sh /root/quorum-maker/build_java.sh
 RUN chmod +x /root/quorum-maker/build_java.sh
 Run ./root/quorum-maker/build_java.sh
-
-
-
+ADD NodeManagerGo /root/quorum-maker/NodeManagerGo
+ADD build_go.sh /root/quorum-maker/build_go.sh
+RUN chmod +x /root/quorum-maker/build_go.sh
+Run ./root/quorum-maker/build_go.sh
