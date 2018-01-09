@@ -16,7 +16,7 @@ PS1='$ '
 source ~/.bashrc
 cp /usr/local/apache-maven/apache-maven-3.3.9/bin/mvn /usr/bin/.
 cd /root/quorum-maker
-git clone https://RakhiB:Rakhi123@https://gitlab.com/quorum-maker/NodeManager.git
+git clone https://RakhiB:Rakhi123@gitlab.com/quorum-maker/NodeManager.git
 cd /root/quorum-maker/NodeManager
 mvn -v
 mvn clean
