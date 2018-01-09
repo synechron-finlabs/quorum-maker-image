@@ -15,11 +15,12 @@ chmod a+x ~/.bashrc
 PS1='$ '
 source ~/.bashrc
 cp /usr/local/apache-maven/apache-maven-3.3.9/bin/mvn /usr/bin/.
+cd /root/quorum-maker
+git clone https://RakhiB:Rakhi123@https://gitlab.com/quorum-maker/NodeManager.git
 cd /root/quorum-maker/NodeManager
 mvn -v
 mvn clean
 mvn install
-
 mv /root/quorum-maker/NodeManager/master_node.sh /root/quorum-maker/.
 mv /root/quorum-maker/NodeManager/get_genesis.sh /root/quorum-maker/.
 mv /root/quorum-maker/NodeManager/target/nodeManager.jar /root/quorum-maker/.
