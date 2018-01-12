@@ -12,4 +12,3 @@ ADD NodeManagerGo /root/go/src/synechron.com/NodeManagerGo
 ADD build_go.sh /root/quorum-maker/build_go.sh
 RUN chmod +x /root/quorum-maker/build_go.sh
 RUN ./root/quorum-maker/build_go.sh
-
