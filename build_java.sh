@@ -25,3 +25,8 @@ mv /root/quorum-maker/NodeManager/get_genesis.sh /root/quorum-maker/.
 mv /root/quorum-maker/NodeManager/target/nodeManager.jar /root/quorum-maker/.
 cd /root/quorum-maker
 rm -rf NodeManager
+rm -rf /usr/local/go
+rm -rf /root/quorum-maker/install_baseimage.sh
+rm -rf /root/quorum-maker/install_languages.sh
+rm -rf /root/quorum-maker/install_quorum.sh
+rm -rf /root/quorum-maker/build_java.sh
