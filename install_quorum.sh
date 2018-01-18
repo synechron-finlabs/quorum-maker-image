@@ -22,8 +22,6 @@ echo 'GOROOT=/usr/local/go' >> ~/.bashrc
 echo 'PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
 source ~/.bashrc
 
-curl -sL https://deb.nodesource.com/setup_6.x | bash 
-apt-get install -y nodejs
 apt-get install -y build-essential
 
 git clone https://github.com/jpmorganchase/quorum.git
@@ -36,6 +34,6 @@ cp build/bin/bootnode /usr/local/bin
 wget https://github.com/jpmorganchase/constellation/releases/download/v0.2.0/constellation-0.2.0-ubuntu1604.tar.xz
 tar -xf constellation-0.2.0-ubuntu1604.tar.xz
 cp constellation-0.2.0-ubuntu1604/constellation-node /usr/bin/.
-
-
-
+cd ..
+rm -rf quorum
+rm -rf go1.9.2.linux-amd64.tar.gz

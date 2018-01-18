@@ -22,6 +22,4 @@ echo 'GOROOT=/usr/local/go' >> ~/.bashrc
 echo 'PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
 source ~/.bashrc
 
-curl -sL https://deb.nodesource.com/setup_6.x | bash 
-apt-get install -y nodejs
 apt-get install -y build-essential

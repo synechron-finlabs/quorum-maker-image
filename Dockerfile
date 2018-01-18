@@ -7,7 +7,8 @@ RUN ./root/quorum-maker/install_quorum.sh
 ADD NodeManager /root/quorum-maker/NodeManager
 ADD build_java.sh /root/quorum-maker/build_java.sh
 RUN chmod +x /root/quorum-maker/build_java.sh
-Run ./root/quorum-maker/build_java.sh
-
-
-
+RUN ./root/quorum-maker/build_java.sh
+ADD NodeManagerGo /root/go/src/synechron.com/NodeManagerGo
+ADD build_go.sh /root/quorum-maker/build_go.sh
+RUN chmod +x /root/quorum-maker/build_go.sh
+RUN ./root/quorum-maker/build_go.sh
