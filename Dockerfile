@@ -14,4 +14,3 @@ RUN chmod +x /root/quorum-maker/build_go.sh
 RUN ./root/quorum-maker/build_go.sh
 ADD start_nodemanager.sh /root/quorum-maker/start_nodemanager.sh
 RUN chmod +x /root/quorum-maker/start_nodemanager.sh
-
