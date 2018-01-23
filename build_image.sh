@@ -1,7 +1,7 @@
 #!/bin/bash
 if [ "$1" == "java" ]; then
 	sed -i.bak -e '11,14d' Dockerfile
-	sed -i.bak -e '5,8d' start_nodemanager.sh
+	sed -i.bak -e '5,6d' start_nodemanager.sh
 else
 	sed -i.bak -e '7,10d' Dockerfile
 	sed -i.bak -e '4d' start_nodemanager.sh
