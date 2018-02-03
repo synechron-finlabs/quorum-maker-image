@@ -14,6 +14,10 @@ apt add --update go git mercurial build-base
 apt-get install -y make
 apt-get install -y telnetd
 apt-get install -y openssh-server
+apt-get install software-properties-common python-software-properties -y
+add-apt-repository ppa:ethereum/ethereum -y
+apt-get update
+apt-get install solc -y
 
 wget https://storage.googleapis.com/golang/go1.9.2.linux-amd64.tar.gz
 tar -xf go1.9.2.linux-amd64.tar.gz
