@@ -14,7 +14,7 @@ if [ "$1" == "java" ]; then
 	sed -i.bak -e '5,10d' start_nodemanager.sh
 	
 	if [ ! -e  NodeManager ]; then
-		ln -s ../NodeManager NodeManager
+		cp -r ../NodeManager NodeManager
 	fi
 	
 else
@@ -25,7 +25,7 @@ else
 	
 
 	if [ ! -e  NodeManagerGo ]; then
-		ln -s ../NodeManagerGo NodeManagerGo
+		cp -r ../NodeManagerGo NodeManagerGo
 	fi
 fi
 
