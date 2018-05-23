@@ -14,3 +14,6 @@ RUN chmod +x /root/quorum-maker/build_go.sh
 RUN ./root/quorum-maker/build_go.sh
 ADD start_nodemanager.sh /root/quorum-maker/start_nodemanager.sh
 RUN chmod +x /root/quorum-maker/start_nodemanager.sh
+ADD reset_chain.sh /root/quorum-maker/reset_chain.sh
+RUN chmod +x /root/quorum-maker/reset_chain.sh
+ADD NetworkManagerContract.sol /root/quorum-maker/NetworkManagerContract.sol
