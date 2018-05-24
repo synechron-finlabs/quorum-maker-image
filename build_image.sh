@@ -1,5 +1,11 @@
 #!/bin/bash
 set -x
+
+imagename="syneblock/quorum-maker"
+tagname="2.0.2_6"
+
+rm -f start_nodemanager.sh
+
 if [ -f  Dockerfile.bak ]; then
     cp -f Dockerfile.bak Dockerfile
 
@@ -11,7 +17,7 @@ if [ "$1" == "java" ]; then
 	echo "Using Java based Node Manager"
 	
 	sed -i.bak -e '11,14d' Dockerfile
-	sed -i.bak -e '5,10d' start_nodemanager.sh
+	cp start_nodemanager_java.sh start_nodemanager.sh
 	
 	if [ ! -e  NodeManager ]; then
 		cp -r ../NodeManager NodeManager
@@ -21,18 +27,23 @@ else
 	echo "Using Golang based Node Manager"
 
 	sed -i.bak -e '7,10d' Dockerfile
-	sed -i.bak -e '4d' start_nodemanager.sh
-	
+	cp start_nodemanager_go.sh start_nodemanager.sh
+		
 
 	if [ ! -e  NodeManagerGo ]; then
 		cp -r ../NodeManagerGo NodeManagerGo
 	fi
 fi
 
-echo "Please provide the image name"
-read imagename
-echo "Please provide the tag name"
-read tagname
+if [ ! -z "$1" ]; then
+    imagename=$1
+fi
+
+if [ ! -z "$2" ]; then
+    tagname=$2
+fi
+
+
 dockername=$imagename":"$tagname
 echo "The docker image name: "$dockername
-docker build -t $dockername .
+docker build --no-cache -t $dockername .
