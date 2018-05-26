@@ -2,6 +2,7 @@ go get -u github.com/gorilla/mux
 go get -u github.com/ybbus/jsonrpc
 go get -u github.com/magiconair/properties
 go get -u gopkg.in/gomail.v2
+go get -u github.com/sirupsen/logrus
 cd /root/go/src/synechron.com/NodeManagerGo
 go build
 chmod a+x NodeManagerGo
