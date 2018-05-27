@@ -1,3 +1,2 @@
-Dockerfile.bak
-NodeManagerGo/
-start_nodemanager.sh
+quorum
+quorum-maker-nodemanager

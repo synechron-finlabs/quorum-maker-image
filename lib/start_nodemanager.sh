@@ -8,7 +8,7 @@ socket="http://localhost:$1"
 echo "Starting Node Manager... "
 
 if [ $# -gt 1 ]; then
-	./NodeManagerGo $socket $2 $3
+	./NodeManager $socket $2 $3
 else
-	./NodeManagerGo
+	./NodeManager
 fi
