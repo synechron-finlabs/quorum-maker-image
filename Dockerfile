@@ -18,3 +18,5 @@ ADD lib/reset_chain.sh /root/quorum-maker/reset_chain.sh
 RUN chmod +x /root/quorum-maker/reset_chain.sh
 
 ADD quorum-maker-nodemanager/NetworkManagerContract.sol /root/quorum-maker/NetworkManagerContract.sol
+ADD quorum-maker-nodemanager/NodeUnavailableTemplate.txt /root/quorum-maker/NodeUnavailableTemplate.txt
+ADD quorum-maker-nodemanager/JoinRequestTemplate.txt /root/quorum-maker/JoinRequestTemplate.txt
