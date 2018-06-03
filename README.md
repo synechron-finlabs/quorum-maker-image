@@ -1,9 +1,24 @@
-Instructions for Docker creation:
+# Quorum Maker Docker image building utility #
 
-1)DockerFile will add install_baseimages.sh, install_languages.sh, install_quorum.sh, install_all.sh shell scripts into docker image.
-2) install_baseimages.sh contains commands to install basic utilities needed for smooth usage of ubuntu. So, if you want ubuntu 16.04 image with utilies with wget,curl,nano,telnet then replace change script to be executed from install_quorum.sh to install_baseimage.sh
-Ex. replace "RUN ./root/quorum-maker/install_All.sh"  with "RUN ./root/quorum-maker/install_baseimage.sh"
-3) install_languages.sh has setup of go-lang as well nodejs(npm included). I f you want ubuntu and one of these languages then use this script instead of install_quorum.sh
-4) install_quorum.sh will install quorum on top all that is already install in above 2 shell scripts.
-5) DockerFile will also add and execute build_java.sh script.
-6) build_java.sh installs open-jdk8 and mvn, sets environment variable and create nodemanager.jar inside docker image and also provides master_node.sh shell script to be used when you fire up container using this image.
+Quorum Maker uses Docker to make the setup easy. Most of the dependancies are baked into the image, so users can get going without having to download and install a list of dependancies. If you want to use a different version of these dependancies other than officially supported by Quorum Maker, build the docker image locally and use with Quorum Maker. 
+
+> **Usage of Quorum Maker image building utility is optional. The official docker image is uploaded in docker hub.**
+
+## Quick Start ##
+
+1. Create a temperory directory and clone following three projects
+   1. `mkdir qmtemp; cd qmtemp ` 
+   1. `git clone https://github.com/synechron-finlabs/quorum-maker-nodemanager.git`
+   1. `git clone https://github.com/synechron-finlabs/quorum-maker-ui.git`
+   1. `git clone https://github.com/synechron-finlabs/quorum-maker-image.git` 
+   1. Quorum Maker project is not required to build docker image as it is required only at runtime. 
+1. Run `./build_image.sh` inside quorum-maker-image directory. Following are the steps executed automatically by this script. 
+   1. Automatically build quorum-maker-nodemanager using Golang and copy the executable to image.
+   2. Automatically build quorum-maker-nodemanager using Angular and copy HTML, JS, CSS and images. 
+   3. Automatically clone Quorum and copy `geth` and `bootnode` to image.
+   4. Download `Constellation` executable and copy to image.
+   5. Install Linux libraries.
+1. Tag docker image
+
+
+Please refer to the source code and edit each libraries versions before you build. Make sure to update the image tag name on Quorum Maker to use this newly built image.  
