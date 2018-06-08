@@ -2,8 +2,7 @@
 set -x
 
 imagename="syneblock/quorum-maker"
-tagname="2.0.2_6"
-
+tagname="2.0.2_2.1"
 
 if [ ! -z "$1" ]; then
     imagename=$1
