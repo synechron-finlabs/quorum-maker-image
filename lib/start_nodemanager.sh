@@ -5,8 +5,6 @@ cd /root/quorum-maker/
 
 socket="http://localhost:$1"
 
-echo "Starting Node Manager... "
-
 if [ $# -gt 1 ]; then
 	./NodeManager $socket $2 $3
 else
