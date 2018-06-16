@@ -26,8 +26,6 @@ fi
 dockername=$imagename":"$tagname
 echo "Building image, "$dockername"..."
 
-exit
-
 lib/install_quorum.sh
 lib/build_nodemanager.sh
 lib/build_ui.sh
