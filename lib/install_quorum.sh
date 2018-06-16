@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -x 
-
 source lib/common.sh 
 
 rm -rf quorum
