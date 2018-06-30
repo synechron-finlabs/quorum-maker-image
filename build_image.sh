@@ -1,9 +1,30 @@
 #!/bin/bash
 
-imagename="syneblock/quorum-maker"
+source qm.variables
+
+CYAN=$'\e[1;96m'
+COLOR_END=$'\e[0m'
+
+function getTag() {
+    local __tag=$1
+    local __defaultVal=$2
+    local __resultvar=$3
+    
+    if [ $__tag = "development" ]; then
+        __newValue="Dev"
+    elif [ $__tag = "master" ]; then
+        __newValue=$__defaultVal
+    elif [[ $__tag == V* ]] || [[ $__tag == v* ]]; then
+        __newValue=$(echo $__tag | cut -c 2-)
+    else
+        __newValue=$__tag
+    fi
+
+    eval $__resultvar="'$__newValue'"
+}
 
 if [ ! -z "$1" ]; then
-    imagename=$1
+    dockerImage=$1
 fi
 
 if [ ! -z "$2" ]; then
@@ -12,19 +33,16 @@ else
 
     branch=$(git branch | grep \* | cut -d ' ' -f2-)
 
-    if [ $branch = "development" ]; then
-        tagname="2.0.2_Dev"
-    elif [ $branch = "master" ]; then
-        tagname="2.0.2"
-    elif [[ $branch == V* ]] || [[ $branch == v* ]]; then
-            tagname="2.0.2_"$(echo $branch | cut -c 2-)
-    else
-            tagname="2.0.2_"$branch
-    fi
+
+    getTag $quorum_version 2.0.2 quorum_version
+
+    getTag $branch $quorum_maker_version quorum_maker_version
+
+    tagname=$quorum_version"_"$quorum_maker_version
 fi
 
-dockername=$imagename":"$tagname
-echo "Building image, "$dockername"..."
+dockername=$dockerImage":"$tagname
+echo $CYAN"Building image, "$dockername"..."$COLOR_END
 
 lib/install_quorum.sh
 lib/build_nodemanager.sh
