@@ -1,9 +1,7 @@
 #!/bin/bash
 
 source qm.variables
-
-CYAN=$'\e[1;96m'
-COLOR_END=$'\e[0m'
+source lib/common.sh
 
 function getTag() {
     local __tag=$1
