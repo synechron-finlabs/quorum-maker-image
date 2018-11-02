@@ -1,3 +1,3 @@
 dockerImage=syneblock/quorum-maker
-quorum_version=v2.1.0    # Quorum Branch or Tag
-quorum_maker_version=2.5 # Not the branch or Tag, rather the default tag for the image. Branch or Tag will be from currently checkout git source.
+quorum_version=v2.1.1    # Quorum Branch or Tag
+quorum_maker_version=2.5.1 # Not the branch or Tag, rather the default tag for the image. Branch or Tag will be from currently checkout git source.
