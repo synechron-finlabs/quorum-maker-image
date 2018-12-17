@@ -13,3 +13,4 @@ apt-get install -y iputils-ping
 add-apt-repository ppa:ethereum/ethereum -y
 apt-get update
 apt-get install solc -y
+apt-get install bsdmainutils
