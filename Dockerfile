@@ -5,6 +5,14 @@ RUN /root/quorum-maker/install_baseimage.sh
 ADD lib/install_constellation.sh /root/quorum-maker/install_constellation.sh
 RUN /root/quorum-maker/install_constellation.sh
 
+ADD tessera/tessera-app/target/tessera-app.jar /tessera/tessera-app.jar
+ADD tessera/data-migration/target/data-migration-cli.jar /tessera/data-migration-cli.jar
+ADD tessera/config-migration/target/config-migration-cli.jar /tessera/config-migration-cli.jar
+
+RUN echo "alias tessera=\"java -jar /tessera/tessera-app.jar\"" >> ~/.bashrc
+RUN echo "alias tessera-data-migration=\"java -jar /tessera/data-migration-cli.jar\"" >> ~/.bashrc
+RUN echo "alias tessera-config-migration=\"java -jar /tessera/config-migration-cli.jar\"" >> ~/.bashrc
+
 ADD quorum/build/bin/geth /usr/local/bin
 ADD quorum/build/bin/bootnode /usr/local/bin
 
