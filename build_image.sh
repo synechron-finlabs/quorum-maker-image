@@ -29,12 +29,12 @@ if [ ! -z "$2" ]; then
     tagname=$2
 else 
 
-    branch=$(git branch | grep \* | cut -d ' ' -f2-)
+    # branch=$(git branch | grep \* | cut -d ' ' -f2-)
 
 
-    getTag $quorum_version 2.0.2 quorum_version
+    # getTag $quorum_version 2.0.2 quorum_version
 
-    getTag $branch $quorum_maker_version quorum_maker_version
+    # getTag $branch $quorum_maker_version quorum_maker_version
 
     tagname=$quorum_version"_"$quorum_maker_version
 fi

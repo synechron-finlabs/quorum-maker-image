@@ -1,4 +1,4 @@
 dockerImage=syneblock/quorum-maker
-quorum_version=v2.2.1    # Quorum Branch or Tag
+quorum_version=2.2.1    # Quorum Branch or Tag
 quorum_maker_version=2.6.2 # Not the branch or Tag, rather the default tag for the image. Branch or Tag will be from currently checkout git source.
 tessera_version=0.8
