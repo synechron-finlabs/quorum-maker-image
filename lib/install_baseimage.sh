@@ -17,3 +17,4 @@ apt-get install bsdmainutils
 apt-get install -y openjdk-8-jdk
 apt-get -y install maven
 apt-get -y install net-tools
+apt-get -y install git
