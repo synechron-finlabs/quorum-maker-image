@@ -10,11 +10,13 @@ apt-get install -y curl
 apt-get install -y jq
 apt-get install -y psmisc
 apt-get install -y iputils-ping
-add-apt-repository ppa:ethereum/ethereum -y
-apt-get update
-apt-get install solc -y
+
 apt-get install bsdmainutils
 apt-get install -y openjdk-8-jdk
 apt-get -y install maven
 apt-get -y install net-tools
 apt-get -y install git
+
+wget https://github.com/ethereum/solidity/releases/download/v0.5.2/solc-static-linux
+chmod +x solc-static-linux
+mv solc-static-linux /usr/bin/solc
