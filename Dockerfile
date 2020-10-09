@@ -1,4 +1,5 @@
 FROM ubuntu:16.04
+
 ADD lib/install_baseimage.sh /root/quorum-maker/install_baseimage.sh
 RUN /root/quorum-maker/install_baseimage.sh
 
@@ -17,7 +18,7 @@ ADD quorum/build/bin/geth /usr/local/bin
 ADD quorum/build/bin/bootnode /usr/local/bin
 
 ADD quorum-maker-nodemanager/quorum-maker-nodemanager /root/quorum-maker/NodeManager
-ADD quorum-maker-ui/webApp/dist /root/quorum-maker/NodeManagerUI/qm
+ADD quorum-maker-ui/webApp/dist /root/quorum-maker/NodeManagerUI
 
 ADD lib/start_nodemanager.sh /root/quorum-maker/start_nodemanager.sh
 RUN chmod +x /root/quorum-maker/start_nodemanager.sh

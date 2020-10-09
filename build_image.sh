@@ -48,4 +48,4 @@ lib/build_nodemanager.sh
 lib/build_ui.sh
 
 
-docker build --no-cache -t $dockername .
+docker build -t $dockername .

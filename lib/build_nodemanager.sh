@@ -21,13 +21,9 @@ popd > /dev/null
 
 docker run -it --rm \
     -v $(pwd)/quorum-maker-nodemanager:/go/src/github.com/synechron-finlabs/quorum-maker-nodemanager \
-    golang:1.11 \
+    golang:1.15 \
     /bin/sh -c 'cd /go/src/github.com/synechron-finlabs/quorum-maker-nodemanager ; \
-                export GO111MODULE="on"; \
-                go mod init github.com/synechron-finlabs/quorum-maker-nodemanager; \
-                go mod edit -require github.com/ethereum/go-ethereum@release/1.8; \
-                go get -v ./... ; \
-                go build -o quorum-maker-nodemanager'
+                go get ./... ; go build -o quorum-maker-nodemanager'
 
 ## Change the owneship of directory
 chownDir 'quorum-maker-nodemanager'
